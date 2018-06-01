@@ -1,0 +1,1 @@
+  var students = '[  {     "firstName": "Moaaz",     "lastName": "Labash",     "age": "33",    "gitHub" : "https://github.com/MLabash",    "friend" : {       "firstName" : "Malek",      "age" : "23"     } },  {     "firstName": "Shadi",     "lastName": "Alhakimi",     "age": "26",     "gitHub" : "https://shadialhakimi.github.io/"}]';
