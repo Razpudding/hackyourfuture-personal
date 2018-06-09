@@ -44,7 +44,7 @@ X. Etc.
 If we do this synchronolously there is no chance of it becoming a good meal because some of the food will be cold by the time other parts are ready. It would also take way too long this way. So let's fix that!
 1. Think about how to do this asynchronously; which tasks could be run concurrently? What steps should wait for what other steps?
 2. Write down in pseudocode (in markdown) which tasks are dependent on which other tasks
-3. Write the actual code using promises.
+3. Write the actual code using promises. Add timeouts to each task (estimate how many minutes a task would take and then set the timeout to that many seconds)
 4. think about where you could use Promise.all
 
 ## Conclusion
