@@ -9,6 +9,9 @@
 
 ## Homework
 * How did last week's homework go?
+    - We agreed to ask questions on Slack
+    - Make many commit
+    - Add commit messages
 * Who wants to show of their work?
 * Some notes from your reviewers 👨‍🏫
     - Commit early and often
