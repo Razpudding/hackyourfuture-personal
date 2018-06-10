@@ -9,12 +9,17 @@
 
 ## Homework
 * How did last week's homework go?
+* Who wants to show of their work?
 * Some notes from your reviewers 👨‍🏫
-* Who read the material for today?
+    - Commit early and often
+    - Don't use `getElementById` more than once per element -> store elements
+    - Use functions to wrap functionality whenever you can
+* Any questions about the reading materials?
 
 ## Async vs Sync and the Event Loop ♻️
 * What does blocking mean?
 * When do events from the event loop get pushed to the call stack?
+    - Can I film you during this exercise
     - Write down your answer
     - Compare with a neighbour
     - Present your findings to the class
