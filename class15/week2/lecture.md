@@ -10,7 +10,7 @@
 ## Homework
 * How did last week's homework go?
     - We agreed to ask questions on Slack
-    - Make many commit
+    - Make Commits early and often
     - Add commit messages
 * Who wants to show of their work?
 * Some notes from your reviewers 👨‍🏫
@@ -19,6 +19,7 @@
     - Use functions to wrap functionality whenever you can
 * Any questions about the reading materials?
 
+*We've skipped this part of the lecture for now and will talk about it next week*
 ## Async vs Sync and the Event Loop ♻️
 * What does blocking mean?
 * When do events from the event loop get pushed to the call stack?
