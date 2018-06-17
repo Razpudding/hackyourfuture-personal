@@ -1,7 +1,5 @@
 # Lecture for week 3 of JavaScript Module 3
 
-// Convert pasta to async await
-
 ## Today's lecture
 *Start recording the screen with audio!*
 * Homework 👩🏽‍🎓
@@ -13,7 +11,7 @@
 
 ## Homework
 * How did last week's homework go?
-* Who wants to show of their work?
+* Who wants to show their work?
 * Some notes from your reviewers 👨‍🏫
 * Any questions about the reading materials?
 
@@ -27,10 +25,10 @@
 * What should you be careful with when running async code?
 
 ## Pasta Promises 💍
-* [Cooking pasta with promises]()
+* [Cooking pasta with promises](https://codepen.io/Razpudding/pen/Keygge)
 
 ## Cooking better pasta with Async/Await ⏰🍝⏰
-* [What cooking pasta looks like with Async/Await]()
+* [What cooking pasta looks like with Async/Await](https://codepen.io/Razpudding/pen/RJZeJO)
 * [What your SPA could look like with Async/Await](https://github.com/HackYourFuture/JavaScript3_examples/tree/master/src/week3/app)
 
 ## Try catch 🏈

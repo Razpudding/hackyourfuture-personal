@@ -1,5 +1,3 @@
-// The problem with this approach is we don't know when prepare pasta and the other promise chain are finished
-
 cookMeal()
 
 async function cookMeal(){
@@ -12,9 +10,14 @@ async function cookMeal(){
 
   let bakedVegggies = cutIngredients(ingredients)
     .then(vegetables => bakeVegetables(vegetables))   //Explicit instead of shorthand
-    //.catch((err) => console.log(err))
 
-  Promise.all([cookedPasta, bakedVegggies]).then(console.log("dinner's ready!"))
+  //Wait for both the pasta to be cooked and the veggies to be baked
+  let pasta = await cookedPasta
+  console.log("Pasta is cooked ", pasta)
+  let veggies = await bakedVegggies
+  console.log("Veggies are baked", veggies)
+  let meal = await mixTogether([pasta,veggies])
+  console.log("dinner's ready!", meal)
 }
 
 function gatherIngredients(){
@@ -62,7 +65,7 @@ function cutIngredients(items){
       }
       //console.log(items)
       resolve(vegetables)
-    },items.length * 1000)
+    },3000)
   })
 }
 
@@ -95,9 +98,14 @@ function cookPasta(ingredients){
   console.log("cooking Pasta")
   return new Promise( (resolve,reject) => {
     setTimeout( () => {
-      ingredients.find(item => item.name == "pasta")
-        .state = "cooked"
-      resolve()
+      let pasta = ingredients.find(item => item.name == "pasta")
+      pasta.state = "cooked"
+      resolve(pasta)
     }, 5000)
   })
+}
+
+function mixTogether(stuff){
+  console.log("Mixing stuff")
+  return stuff.join()
 }
