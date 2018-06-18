@@ -2,22 +2,26 @@ cookMeal()
 
 async function cookMeal(){
   //First get all the ingredients needed
-  let ingredients = await gatherIngredients()
+  try {
+    let ingredients = await gatherIngredients()
+    //Then prepare the pasta and cut the ingredients SIMULTANEOUSLY
+    let cookedPasta = boilWater(ingredients)
+      .then(cookPasta)
 
-  //Then prepare the pasta and cut the ingredients SIMULTANEOUSLY
-  let cookedPasta = boilWater(ingredients)
-    .then(cookPasta)
+    let bakedVegggies = cutIngredients(ingredients)
+      .then(vegetables => bakeVegetables(vegetables))   //Explicit instead of shorthand
 
-  let bakedVegggies = cutIngredients(ingredients)
-    .then(vegetables => bakeVegetables(vegetables))   //Explicit instead of shorthand
-
-  //Wait for both the pasta to be cooked and the veggies to be baked
-  let pasta = await cookedPasta
-  console.log("Pasta is cooked ", pasta)
-  let veggies = await bakedVegggies
-  console.log("Veggies are baked", veggies)
-  let meal = await mixTogether([pasta,veggies])
-  console.log("dinner's ready!", meal)
+    //Wait for both the pasta to be cooked and the veggies to be baked
+    let pasta = await cookedPasta
+    console.log("Pasta is cooked ", pasta)
+    let veggies = await bakedVegggies
+    console.log("Veggies are baked", veggies)
+    let meal = await mixTogether([pasta,veggies])
+  }
+  catch(err){
+    console.error(err)
+  }
+  console.log("dinner's ready! 🍝")
 }
 
 function gatherIngredients(){
@@ -56,7 +60,6 @@ function cutIngredients(items){
   return new Promise( (resolve,reject) => {
     setTimeout( () => {
       for (ingredient of items){
-        
         if ("cut" in ingredient){
           console.log("cutting ", ingredient)
           ingredient.cut = true

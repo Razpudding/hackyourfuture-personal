@@ -12,6 +12,8 @@
 ## Homework
 * How did last week's homework go?
 * Who wants to show their work?
+    - [Wael actually uses reject on xhr status](https://github.com/HackYourFuture/JavaScript3/pull/27/commits/24eff0c5d713bcbe8490aa4752b5d4af7ce31167#diff-4e71979061b05369d8e5db86ed907378R22) 👍
+    - Knar has some [nice commit messages](https://github.com/HackYourFuture/JavaScript3/pull/25) and [a fancy website](https://pknar.github.io/JavaScript3/Week1/Week1-Homework/)
 * Some notes from your reviewers 👨‍🏫
 * Any questions about the reading materials?
 
